@@ -14,7 +14,7 @@ import java.util.List;
 @Document
 @Getter
 @Setter
-public class Aluno {
+public class Student {
 
     @Id
     private String id;
@@ -23,25 +23,25 @@ public class Aluno {
     private String cpf;
 
     @NotBlank
-    private String nomeCompleto;
+    private String fullName;
 
     @NotBlank
     private String email;
 
-    private List<String> telefones;
+    private List<String> phones;
 
     @NotNull
-    private LocalDate dataNascimento;
+    private LocalDate bornDate;
 
-    private LocalDateTime dataRegistro;
+    private LocalDateTime createdAt;
 
-    private Endereco endereco;
+    private Address address;
 
-    private Boolean ativo;
+    private Boolean active;
 
-    private String nomeContato;
+    private String contactName;
 
-    private String telefoneContato;
+    private String contactPhone;
 
 
 }
