@@ -6,13 +6,8 @@ spring:
       database: aluno
       #uri: mongodb://localhost:27017/aluno
 
-
-##usuario quanto sistema
-
 security:
-  oauth2:
-    client:
-      scope: password
-      client-id: poc-puc
-      client-secret: 123
+  jwt:
+    secret: poc-puc
+
 
