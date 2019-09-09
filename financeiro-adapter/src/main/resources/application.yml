@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+management:
+  server:
+    port: 8081
+  security:
+    enabled: false
+  endpoint:
+    health:
+      show-details: always
+    web:
+      exposure:
+        include: info,health, env

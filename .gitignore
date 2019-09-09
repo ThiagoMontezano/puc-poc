@@ -29,3 +29,13 @@ aluno-service/mvnw
 aluno-service/mvnw.cmd
 
 aluno-service/.mvn/wrapper/
+
+financeiro-adapter/.mvn/wrapper/
+
+financeiro-adapter/mvnw.cmd
+
+financeiro-adapter/mvnw
+
+financeiro-service/mvnw
+
+financeiro-service/mvnw.cmd
