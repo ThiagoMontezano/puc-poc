@@ -1,0 +1,56 @@
+<div class="container">
+
+  <h2>Salvar Aluno</h2>
+
+  <form (ngSubmit)="onSubmit()" #contatoForm="ngForm" novalidate>
+
+      <div [ngClass]="getFormGroupClass(nome.valid, nome.pristine)">
+          <label for="nome" class="form-control-label">Nome</label>
+          <input type="text" placeholder="Insira o nome"
+              [ngClass]="getFormControlClass(nome.valid, nome.pristine)"
+              required
+              #nome="ngModel"
+              name="nome"
+              [(ngModel)]="contato.nome">
+          <div class="form-control-feedback" [hidden]="nome.valid || nome.pristine">O campo nome é obrigatório!</div>
+      </div>
+
+      <div [ngClass]="getFormGroupClass(email.valid, email.pristine)">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" placeholder="Insira o email"
+              [ngClass]="getFormControlClass(email.valid, email.pristine)"
+              required
+              #email="ngModel"
+              name="email"
+              [(ngModel)]="contato.email">
+          <div class="form-control-feedback" [hidden]="email.valid || email.pristine">O campo email é obrigatório!</div>
+      </div>
+
+      <div [ngClass]="getFormGroupClass(phone.valid, phone.pristine)">
+          <label for="phone">Telefone</label>
+          <input type="text" class="form-control" placeholder="Insira o telefone"
+              [ngClass]="getFormControlClass(phone.valid, phone.pristine)"
+              required
+              #phone="ngModel"
+              name="phone"
+              [(ngModel)]="contato.phone">
+          <div class="form-control-feedback" [hidden]="phone.valid || phone.pristine">O campo telefone é obrigatório!</div>
+      </div>
+
+      <div [ngClass]="getFormGroupClass(bornDate.valid, bornDate.pristine)">
+        <label for="phone">Aniversário</label>
+        <input type="text" class="form-control" placeholder="Insira o Aniversário"
+            [ngClass]="getFormControlClass(bornDate.valid, bornDate.pristine)"
+            required
+            #bornDate="ngModel"
+            name="bornDate"
+            [(ngModel)]="contato.bornDate">
+        <div class="form-control-feedback" [hidden]="bornDate.valid || bornDate.pristine">O campo telefone é obrigatório!</div>
+    </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!contatoForm.form.valid">Salvar</button>
+      <a class="btn btn-secondary" (click)="goBack()" style="margin-left: 10px">Voltar</a>
+
+  </form>
+
+</div>
